@@ -3,6 +3,9 @@
 <script src="vendor/aframe.js"></script>
 <!-- include aframe-artoolkit -->
 <script src="../build/aframe-ar.js"></script>
+<script>
+    THREEx.ArToolkitContext.baseURL = 'https://rawgit.com/jeromeetienne/ar.js/master/three.js/'
+</script>
 
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
     <div style='position: fixed; top: 14px; width:inherit; text-align: center; z-index: 1;'>
@@ -12,13 +15,20 @@
     <!-- enable artoolkit on this scene -->
     <!---->
     <a-scene embedded artoolkit='sourceType: image; sourceUrl:../../data/images/garden003.jpg;'>
+        <a-assets>
+            <a-asset-item id="carrot" src="../../data/models/Carrot/model.dae"></a-asset-item>
+            <audio id="bassecour" src="../../music/sf_bassecour_04.mp3"></audio>
+        </a-assets>
 
-        <a-plane position="-0.125 0.75 -6" rotation="0 0 0" width="4" height="2" color="#7BC8A4"></a-plane>
-        <a-plane position="-0.125 0.75 -6" rotation="0 0 0" width="3.5" height="1.5" color="#FFFFFFFF"></a-plane>
+        <a-plane position="-0.125 0.75 -6" rotation="-45 0 0" width="4" height="2" color="#7BC8A4"></a-plane>
+        <a-text value="Hello, World!"></a-text>
+        <!--<a-entity collada-model="#carrot"></a-entity>-->
+        <!--<a-sound src="#bassecour"></a-sound>-->
         <a-sky color="#ECECEC"></a-sky>
         <a-entity camera></a-entity>
-    </a-scene>
 
+    </a-scene>
+    <!-- <a-plane position="-0.125 0.75 -6" rotation="0 0 0" width="3.5" height="1.5" color="#FFFFFFFF"></a-plane>-->
     <!-- <a-scene embedded artoolkit='sourceType: webcam;'> -->
     <!--
     <a-scene embedded artoolkit='sourceType: image; sourceUrl:../../data/images/armchair.jpg;'>
