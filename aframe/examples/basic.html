@@ -14,25 +14,25 @@
     </div>
 
     <a-scene embedded artoolkit='sourceType: image; sourceUrl:../../data/images/garden003.jpg;'>
-        <a-scene embedded artoolkit='sourceType: webcam;'>
-            <a-assets>
-                <a-asset-item id="carrot" src="../../data/models/Carrot/model.dae"></a-asset-item>
-                <audio id="bassecour" src="../../music/sf_bassecour_04.mp3"></audio>
-            </a-assets>
-            <a-marker type='pattern' url='../../data/data/patt.hiro'>
-                <a-plane position="0.2 0.2 0.2" rotation="0 0 -45" width="4" height="2" color="#7BC8A4"></a-plane>
-                <a-text value="Démo pour Mohammad"></a-text>
-                <a-entity collada-model="#carrot" rotation="-90 0 0"></a-entity>
-                <a-sound src="#bassecour"></a-sound>
-            </a-marker>
-            <a-sky color="#ECECEC"></a-sky>
-            <a-entity camera></a-entity>
-
-        </a-scene>
-        -->
-        <!-- <a-plane position="-0.125 0.75 -6" rotation="0 0 0" width="3.5" height="1.5" color="#FFFFFFFF"></a-plane>-->
         <!-- <a-scene embedded artoolkit='sourceType: webcam;'> -->
-        <!--
+        <a-assets>
+            <a-asset-item id="carrot" src="../../data/models/Carrot/model.dae"></a-asset-item>
+            <audio id="bassecour" src="../../music/sf_bassecour_04.mp3"></audio>
+        </a-assets>
+        <a-marker id="marker" type='pattern' url='../../data/data/patt.hiro'>
+            <!--<a-plane position="0.2 0.2 0.2" rotation="0 0 -45" width="4" height="2" color="#7BC8A4"></a-plane>-->
+            <a-text id="texte" value="Démo pour Mohammad"></a-text>
+            <a-entity id="carrot" collada-model="#carrot" scale="4 4 4" rotation="-90 0 0" position="0 0 -1.5"></a-entity>
+            <!--<a-entity sound="src: #bassecour"></a-entity>-->
+        </a-marker>
+        <a-sky id="sky" color="#ECECEC"></a-sky>
+        <a-entity id="camera" camera></a-entity>
+
+    </a-scene>
+    -->
+    <!-- <a-plane position="-0.125 0.75 -6" rotation="0 0 0" width="3.5" height="1.5" color="#FFFFFFFF"></a-plane>-->
+    <!-- <a-scene embedded artoolkit='sourceType: webcam;'> -->
+    <!--
     <a-scene embedded artoolkit='sourceType: image; sourceUrl:../../data/images/armchair.jpg;'>
         <a-marker>
             <a-box position='0 0 0.5' material='opacity: 0.5; side: double'>
